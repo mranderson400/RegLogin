@@ -1,0 +1,13 @@
+@model User
+@* <h1>Welcome @Model.FirstName</h1> *@
+<h1>Welcome </h1>
+
+
+
+@if (Context.Session.GetInt32("UUID") != null)
+{
+    <form asp-controller="User" asp-action="Logout" method="POST">
+        <button class="btn btn-link">Logout User</button>
+
+    </form>
+}
